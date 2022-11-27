@@ -1,4 +1,5 @@
 #!/bin/sh
+set -uo pipefail
 
 # A script to install Docker Engine
 
@@ -26,3 +27,5 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plu
 # Add docker group to the current user
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
+echo "Installation finished! you need to logout and login again."
